@@ -61,7 +61,7 @@ class AwsMfa
   end
 
   def load_arn_from_file(arn_file)
-    File.read(arn_file)
+    File.read(arn_file).chomp
   end
 
   def load_arn_from_aws(profile='default')
